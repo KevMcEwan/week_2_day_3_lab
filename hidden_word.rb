@@ -1,9 +1,10 @@
 class Hidden_word
 
-  attr_reader :word
+  attr_reader :word, :letter_present
 
   def initialize(word)
     @word = word
+    @letter_present = false
   end
 
   # def return_indexes(letter, hidden_word)
@@ -23,12 +24,15 @@ class Hidden_word
       for guessed_letter in guessed_letters
         if guessed_letter == letter
           letter_to_push = letter
+          @letter_present = true
         end
       end
     display_letters.push(letter_to_push)
     end
     return display_letters*""
   end
+
+
 
 
 

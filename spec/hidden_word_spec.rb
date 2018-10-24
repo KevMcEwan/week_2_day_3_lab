@@ -27,6 +27,13 @@ class Hidden_WordTest < MiniTest::Test
     assert_equal(expected, actual)
   end
 
+  def test_letter_present__true
+    expected = true
+    @banana.display_word(@game.guessed_letters)
+    actual = @banana.letter_present
+    assert_equal(expected, actual)
+  end 
+
   # def test_return_indexes
   #   expected1 = [1,3,5]
   #   expected2 = [1]
