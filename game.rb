@@ -1,6 +1,8 @@
 class Game
 
-  attr_reader :player, :hidden_word, :guessed_letters
+  attr_reader :player, :hidden_word
+
+  attr_accessor :guessed_letters
 
 
   def initialize(player, hidden_word)
